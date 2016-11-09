@@ -1,0 +1,63 @@
+﻿<Page x:Class="WpfApplication2.Savings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication2"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="700"
+      Title="Savings">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="86*"/>
+            <RowDefinition Height="114*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="65*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="57*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="_20" Content="&gt;&gt; " Grid.Column="1" HorizontalAlignment="Right" Margin="0,18.6,5.6,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="40" HorizontalContentAlignment="Right" FontWeight="Bold" FontSize="22" Click="Click20"/>
+        <Button x:Name="_40" Content="&gt;&gt; " Grid.Column="1" HorizontalAlignment="Right" Margin="0,18.6,5.6,0" Grid.Row="3" VerticalAlignment="Top" Width="70" Height="40" Click="Click40" HorizontalContentAlignment="Right" FontWeight="Bold" FontSize="22"/>
+        <Button x:Name="_60" Content="&gt;&gt; " Grid.Column="1" HorizontalAlignment="Right" Margin="0,18.6,5.6,0" Grid.Row="4" VerticalAlignment="Top" Width="70" Height="40" Click="Click60" HorizontalContentAlignment="Right" FontWeight="Bold" FontSize="22"/>
+        <Button x:Name="_custom" Content=" &lt;&lt;" Grid.Column="4" HorizontalAlignment="Right" Margin="0,18.8,5,0" Grid.Row="4" VerticalAlignment="Top" Width="70" Height="40" Click="customclick" HorizontalContentAlignment="Left" FontWeight="Bold" FontSize="22"/>
+        <Button x:Name="_100" Content=" &lt;&lt;" Grid.Column="4" HorizontalAlignment="Right" Margin="0,18.8,5,0" Grid.Row="3" VerticalAlignment="Top" Width="70" Height="40" Click="Click100" HorizontalContentAlignment="Left" FontWeight="Bold" FontSize="22"/>
+        <Button x:Name="_80" Content=" &lt;&lt;" Grid.Column="4" HorizontalAlignment="Right" Margin="0,18.8,5,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="40" Click="Clcik80" HorizontalContentAlignment="Left" FontWeight="Bold" FontSize="22" Background="#FFDDDDDD"/>
+        <Rectangle Grid.Column="2" Fill="#FF90F000" HorizontalAlignment="Left" Height="240" Margin="0,113.4,0,0" Grid.Row="1" Grid.RowSpan="4" Stroke="Black" VerticalAlignment="Top" Width="320" Grid.ColumnSpan="2"/>
+        <Rectangle Grid.Column="2" Fill="#FF00940C" HorizontalAlignment="Left" Height="46" Margin="0,79.8,0,0" Grid.Row="4" Grid.RowSpan="2" Stroke="Black" VerticalAlignment="Top" Width="320" Grid.ColumnSpan="2"/>
+        <Border BorderBrush="Black" BorderThickness="2" Grid.Column="2" HorizontalAlignment="Left" Height="80" Margin="0,113.6,0,0" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Top" Width="160">
+            <Label x:Name="label_Copy" Content="$20" HorizontalAlignment="Center" Height="80" Margin="0,0,-1.6,-1.6" VerticalAlignment="Center" Width="160" VerticalContentAlignment="Center" FontSize="36" FontWeight="Bold"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="2" Grid.Column="2" HorizontalAlignment="Left" Height="80" Margin="0,79.2,0,0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Center" Width="160">
+            <Label x:Name="label_Copy1" Content="$40" HorizontalAlignment="Center" Height="80" Margin="0,0,-1.6,-1.6" VerticalAlignment="Center" Width="160" VerticalContentAlignment="Center" FontSize="36" FontWeight="Bold"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="2" Grid.Column="2" HorizontalAlignment="Left" Height="80" Margin="0,79.2,0,0" Grid.Row="3" Grid.RowSpan="2" VerticalAlignment="Bottom" Width="160">
+            <Label x:Name="label_Copy2" Content="$60" HorizontalAlignment="Center" Height="80" Margin="0,0,-1.6,-1.6" VerticalAlignment="Center" Width="160" VerticalContentAlignment="Center" FontSize="36" FontWeight="Bold"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="2" Grid.Column="3" HorizontalAlignment="Right" Height="80" Margin="0,79.2,0,0" Grid.Row="3" Grid.RowSpan="2" VerticalAlignment="Bottom" Width="160">
+            <TextBox x:Name="textBox" TextWrapping="Wrap" Text="Specify Amount" TextChanged="textBox_TextChanged" Background="White" FontSize="20" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" PreviewTextInput="textBox_PreviewTextInput" GotFocus="textBox_GotFocus"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="2" Grid.Column="3" HorizontalAlignment="Right" Height="80" Margin="0,79.2,0,0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Center" Width="160">
+            <Label x:Name="label_Copy4" Content="$100" HorizontalAlignment="Center" Height="80" Margin="0,0,-1.6,-1.6" VerticalAlignment="Center" Width="160" VerticalContentAlignment="Center" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Right"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="2" Grid.Column="3" HorizontalAlignment="Right" Height="80" Margin="0,113.6,0,0" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Top" Width="160">
+            <Label x:Name="label_Copy3" Content="$80" HorizontalAlignment="Center" Height="80" Margin="0,0,-1.6,-1.6" VerticalAlignment="Center" Width="160" VerticalContentAlignment="Center" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Right"/>
+        </Border>
+        <Button x:Name="_balance" Content="&gt;&gt; " Grid.Column="1" HorizontalAlignment="Right" Margin="0,3.6,5.6,0" Grid.Row="5" VerticalAlignment="Top" Width="70" Height="40" Click="showhide" HorizontalContentAlignment="Right" FontWeight="Bold" FontSize="22"/>
+        <Label x:Name="label" Content="Show/Hide &#xD;&#xA;Savings Balance" Grid.Column="2" HorizontalAlignment="Left" Height="46" Margin="0,79.8,0,0" Grid.Row="4" Grid.RowSpan="2" VerticalAlignment="Top" Width="160" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+        <TextBlock x:Name="textBlock" Grid.Column="3" HorizontalAlignment="Center" Height="32" Margin="30,11.8,0,0" Grid.Row="5" TextWrapping="Wrap" Text="$ Balance" Width="130" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="label1" Grid.ColumnSpan="2" Content="Withdraw from Savings" Grid.Column="2" HorizontalAlignment="Center" Height="34" Margin="0,79.4,0,0" Grid.Row="1" VerticalAlignment="Bottom" Width="320" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="button1" Grid.ColumnSpan="2" Content="&lt;&lt; Back" Height="40" Margin="20,39.6,1.6,0" Grid.Row="1" VerticalAlignment="Top" Click="button1_Click" FontSize="16" FontWeight="Bold" Background="#FF3DFFEE"/>
+        <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="2" Grid.Column="3" Margin="1.8,0,79.8,19" Grid.Row="5" Height="45" VerticalAlignment="Bottom"/>
+        <Label x:Name="status" Grid.ColumnSpan="3" Content="Status: Ready" Grid.Column="3" Height="30" Margin="34.6,28,11,0" Grid.Row="6" VerticalAlignment="Top" FlowDirection="RightToLeft"/>
+    </Grid>
+</Page>
