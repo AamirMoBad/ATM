@@ -59,118 +59,73 @@ namespace WpfApplication2
 
         }
 
-        private void updateBalance(int balance)
+        private void updateBalance(double balance)
         {
             balanceAmountLabel.Content = "$" + balance.ToString() + ".00";
         }
 
-
-        private void withdraw10_Click(object sender, RoutedEventArgs e)
-        {
+        // Withdraws specified amount within reasonable limits
+        public void withdraw(int amount) {
             if (accountSelect == 1)
             {
-                MainWindow.savingBalance -= 10;
-                updateBalance(MainWindow.savingBalance);
+                if (amount > MainWindow.savingBalance)
+                {
+                    error_Label.Content = "You do not have enough funds";
+                } else
+                {
+                    MainWindow.savingBalance -= amount;
+                    updateBalance(MainWindow.savingBalance);
+                    error_Label.Content = "";
+                }
             }
             else if (accountSelect == 2)
             {
-                MainWindow.chequingBalance -= 10;
-                updateBalance(MainWindow.chequingBalance);
-            }
-            else
+                if (amount > MainWindow.chequingBalance)
+                {
+                    error_Label.Content = "You do not have enough funds";
+                }
+                else
+                {
+                    MainWindow.chequingBalance -= amount;
+                    updateBalance(MainWindow.chequingBalance);
+                    error_Label.Content = "";
+                }
+            } else if (accountSelect == 0)
             {
-
+                error_Label.Content = "Please select an Account";
             }
+        }
+
+
+
+        private void withdraw10_Click(object sender, RoutedEventArgs e)
+        {
+            withdraw(10);
         }
     
         private void withdraw20_Click(object sender, RoutedEventArgs e)
         {
-            if (accountSelect == 1)
-            {
-                MainWindow.savingBalance -= 20;
-                updateBalance(MainWindow.savingBalance);
-            }
-            else if (accountSelect == 2)
-            {
-                MainWindow.chequingBalance -= 20;
-                updateBalance(MainWindow.chequingBalance);
-            }
-            else
-            {
-
-            }
+            withdraw(20);
         }
 
         private void withdraw50_Click(object sender, RoutedEventArgs e)
         {
-            if (accountSelect == 1)
-            {
-                MainWindow.savingBalance -= 50;
-                updateBalance(MainWindow.savingBalance);
-            }
-            else if (accountSelect == 2)
-            {
-                MainWindow.chequingBalance -= 50;
-                updateBalance(MainWindow.chequingBalance);
-            }
-            else
-            {
-
-            }
+            withdraw(50);
         }
 
         private void withdraw100_Click(object sender, RoutedEventArgs e)
         {
-            if (accountSelect == 1)
-            {
-                MainWindow.savingBalance -= 100;
-                updateBalance(MainWindow.savingBalance);
-            }
-            else if (accountSelect == 2)
-            {
-                MainWindow.chequingBalance -= 100;
-                updateBalance(MainWindow.chequingBalance);
-            }
-            else
-            {
-
-            }
+            withdraw(100);
         }
 
         private void withdraw200_Click(object sender, RoutedEventArgs e)
         {
-            if (accountSelect == 1)
-            {
-                MainWindow.savingBalance -= 200;
-                updateBalance(MainWindow.savingBalance);
-            }
-            else if (accountSelect == 2)
-            {
-                MainWindow.chequingBalance -= 200;
-                updateBalance(MainWindow.chequingBalance);
-            }
-            else
-            {
-
-            }
+            withdraw(200);
         }
 
         private void withdraw500_Click(object sender, RoutedEventArgs e)
         {
-            if (accountSelect == 1)
-            {
-                MainWindow.savingBalance -= 500;
-                updateBalance(MainWindow.savingBalance);
-            }
-            else if (accountSelect == 2)
-            {
-                MainWindow.chequingBalance -= 500;
-                updateBalance(MainWindow.chequingBalance);
-            }
-            else
-            {
-
-            }
+            withdraw(500);
         }
     }
 }

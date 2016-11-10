@@ -52,5 +52,6 @@
         <Button  Height="44" HorizontalAlignment="Left" x:Name="withdraw500Button" Foreground="White" VerticalAlignment="Top" Width="115" HorizontalContentAlignment="Stretch" Click="withdraw500_Click" FontSize="18.667" Background="#FF3B832B" Canvas.Left="220" Canvas.Top="403">
             <TextBlock Text="$500" TextAlignment="Center" />
         </Button>
+        <Label x:Name="error_Label" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="53" Foreground="Red" Canvas.Top="166" Width="680" FontFamily="Segoe UI Symbol" FontSize="14"/>
     </Canvas>
 </Page>

@@ -28,7 +28,7 @@ namespace WpfApplication2
         {
             InitializeComponent();
             accountSelect = 0;
-            accountSelect = 0;
+            accountSelect2 = 0;
             transferAmount = 0;
 
         }
@@ -61,24 +61,6 @@ namespace WpfApplication2
             {
                 balanceAmountLabel.Content = "--------";
             }
-
-        }
-
-        private void updateBalance(int balance,int comboBox)
-        {
-            if (comboBox == 1)
-            {
-                balanceAmountLabel.Content = "$" + balance.ToString() + ".00";
-            }
-            else if (comboBox == 2)
-            {
-                balanceAmountLabel2.Content = "$" + balance.ToString() + ".00";
-            }
-        }
-
-        private void transfer_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         // For second combobox
@@ -87,13 +69,13 @@ namespace WpfApplication2
             // Savings account selected
             if (Account_comboBox2.SelectedIndex == 1)
             {
-                updateBalance(MainWindow.savingBalance,2);
+                updateBalance(MainWindow.savingBalance, 2);
                 accountSelect2 = 1;
             }
             // Checkings account selected
             else if (Account_comboBox2.SelectedIndex == 2)
             {
-                updateBalance(MainWindow.chequingBalance,2);
+                updateBalance(MainWindow.chequingBalance, 2);
                 accountSelect2 = 2;
             }
             else
@@ -102,6 +84,79 @@ namespace WpfApplication2
             }
         }
 
-        
+        // Updates balance displays
+        private void updateBalance(double balance,int comboBox)
+        {
+            if (comboBox == 1)
+            {
+                balanceAmountLabel.Content = "$" + balance.ToString();
+            }
+            else if (comboBox == 2)
+            {
+                balanceAmountLabel2.Content = "$" + balance.ToString();
+            }
+        }
+
+        // Transfers the specified of amount of money
+        private void transfer_Click(object sender, RoutedEventArgs e)
+        {
+            if (transferAmount_TextBox.Text.Equals("$0.00"))
+            {
+                error_Label.Content = "Please input a value";                
+            }
+            else if (transferAmount_TextBox.Text.Equals(string.Empty)){
+                error_Label.Content = "Please input a value";               
+            }
+            else if (Convert.ToDouble(transferAmount_TextBox.Text) <= 0)
+            {
+                error_Label.Content = "Please input a value greater than 0";
+                
+            }
+            else if (accountSelect == 0 || accountSelect2 == 0)
+            {
+                error_Label.Content = "Please specify the accounts for the transaction";          
+            }
+            else if (accountSelect == accountSelect2)
+            {
+                error_Label.Content = "You cannot transfer to the same account";
+            } 
+            else if ((Convert.ToDouble(transferAmount_TextBox.Text) > MainWindow.savingBalance && accountSelect == 1) || (Convert.ToDouble(transferAmount_TextBox.Text) > MainWindow.chequingBalance && accountSelect == 2))
+            {
+                error_Label.Content = "You do not have enough funds";
+            }
+            else
+            {
+                error_Label.Content = "";
+                // Rounds to the 2nd decimal place
+                transferAmount = Math.Round(Convert.ToDouble(transferAmount_TextBox.Text), 2);
+
+                // Transfers and updates balances
+                if (accountSelect == 1 && accountSelect2 == 2)
+                {
+                    MainWindow.savingBalance -= transferAmount;
+                    MainWindow.chequingBalance += transferAmount;
+
+                    updateBalance(MainWindow.savingBalance, 1);
+                    updateBalance(MainWindow.chequingBalance, 2);
+
+                }
+                else if (accountSelect == 2 && accountSelect2 == 1)
+                {
+                    MainWindow.savingBalance += transferAmount;
+                    MainWindow.chequingBalance -= transferAmount;
+
+                    updateBalance(MainWindow.savingBalance, 2);
+                    updateBalance(MainWindow.chequingBalance, 1);
+                }
+            }
+        }
+
+        private void transferAmount_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+        }
+
+
     }
 }

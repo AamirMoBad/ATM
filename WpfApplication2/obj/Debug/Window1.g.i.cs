@@ -40,54 +40,6 @@ namespace WpfApplication2 {
     /// </summary>
     public partial class Window1 : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
-        
-        #line 12 "..\..\Window1.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button button;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 13 "..\..\Window1.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button button_Copy;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 14 "..\..\Window1.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button button_Copy1;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 15 "..\..\Window1.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button button_Copy2;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 16 "..\..\Window1.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBlock textBlock;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 17 "..\..\Window1.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label label;
-        
-        #line default
-        #line hidden
-        
         private bool _contentLoaded;
         
         /// <summary>
@@ -100,7 +52,7 @@ namespace WpfApplication2 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WpfApplication2;component/window1.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ATM_Machine;component/window1.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\Window1.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
@@ -116,33 +68,6 @@ namespace WpfApplication2 {
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
         void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target) {
-            switch (connectionId)
-            {
-            case 1:
-            this.button = ((System.Windows.Controls.Button)(target));
-            return;
-            case 2:
-            this.button_Copy = ((System.Windows.Controls.Button)(target));
-            return;
-            case 3:
-            this.button_Copy1 = ((System.Windows.Controls.Button)(target));
-            
-            #line 14 "..\..\Window1.xaml"
-            this.button_Copy1.Click += new System.Windows.RoutedEventHandler(this.button_Copy1_Click);
-            
-            #line default
-            #line hidden
-            return;
-            case 4:
-            this.button_Copy2 = ((System.Windows.Controls.Button)(target));
-            return;
-            case 5:
-            this.textBlock = ((System.Windows.Controls.TextBlock)(target));
-            return;
-            case 6:
-            this.label = ((System.Windows.Controls.Label)(target));
-            return;
-            }
             this._contentLoaded = true;
         }
     }

@@ -20,7 +20,8 @@ namespace WpfApplication2
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static int chequingBalance = 100, savingBalance=500, totalBalance=savingBalance+chequingBalance;
+        public static double chequingBalance = 100.00, savingBalance=500.00, totalBalance=savingBalance+chequingBalance;
+        public static String pin = "1111";
 
         public MainWindow()
         {

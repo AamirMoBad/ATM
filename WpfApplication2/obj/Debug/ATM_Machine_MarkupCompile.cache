@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Libraries\Git\ATM\WpfApplication2\App.xaml
-7775766117
+11376992490
 
-111146195868
+151877685910
 13738642453
-BalanceWindow.xaml;Chequing.xaml;Login.xaml;MainMenu.xaml;MainWindow.xaml;TransferFundsPage.xaml;WithdrawPage.xaml;
+BalanceWindow.xaml;Chequing.xaml;DepoCashWindow.xaml;DepositPage.xaml;ErrorWindow.xaml;Login.xaml;MainMenu.xaml;MainWindow.xaml;PinVerificationPage.xaml;TransferFundsPage.xaml;WithdrawPage.xaml;
 
 False
 

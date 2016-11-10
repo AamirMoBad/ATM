@@ -2,9 +2,13 @@
 
 FD:\Libraries\Git\ATM\WpfApplication2\BalanceWindow.xaml;;
 FD:\Libraries\Git\ATM\WpfApplication2\Chequing.xaml;;
+FD:\Libraries\Git\ATM\WpfApplication2\DepoCashWindow.xaml;;
+FD:\Libraries\Git\ATM\WpfApplication2\DepositPage.xaml;;
+FD:\Libraries\Git\ATM\WpfApplication2\ErrorWindow.xaml;;
 FD:\Libraries\Git\ATM\WpfApplication2\Login.xaml;;
 FD:\Libraries\Git\ATM\WpfApplication2\MainMenu.xaml;;
 FD:\Libraries\Git\ATM\WpfApplication2\MainWindow.xaml;;
-FD:\Libraries\Git\ATM\WpfApplication2\WithdrawPage.xaml;;
+FD:\Libraries\Git\ATM\WpfApplication2\PinVerificationPage.xaml;;
 FD:\Libraries\Git\ATM\WpfApplication2\TransferFundsPage.xaml;;
+FD:\Libraries\Git\ATM\WpfApplication2\WithdrawPage.xaml;;
 

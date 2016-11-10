@@ -38,16 +38,16 @@
             <Button x:Name="logoutButton" Content="LOGOUT" Foreground="White" HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="125" Background="#FFB02121" FontSize="18" Click="logout_Click" Canvas.Left="516" Canvas.Top="480"/>
         </Canvas>
 
-        <Button  Height="66" HorizontalAlignment="Left" Margin="60,10,0,0" x:Name="withdrawButton" Foreground="White" VerticalAlignment="Top" Width="172" HorizontalContentAlignment="Stretch" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Click="withdraw_Click" FontSize="18.667" Background="#FF3B832B">
+        <Button  Height="66" HorizontalAlignment="Left" x:Name="withdrawButton" Foreground="White" VerticalAlignment="Top" Width="172" HorizontalContentAlignment="Stretch" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Click="withdraw_Click" FontSize="18.667" Background="#FF3B832B">
             <TextBlock Text="WITHDRAW" TextAlignment="Center" />
         </Button>
-        <Button  Height="66" HorizontalAlignment="Left" Margin="10,10,0,0" x:Name="depositButton" Foreground ="White" VerticalAlignment="Top" Width="172" HorizontalContentAlignment="Stretch" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="2" Click="deposit_Click" FontSize="18.667" Background="#FF3B832B">
+        <Button  Height="66" HorizontalAlignment="Left" Margin="70,0,0,0" x:Name="depositButton" Foreground ="White" VerticalAlignment="Top" Width="172" HorizontalContentAlignment="Stretch" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="2" Click="deposit_Click" FontSize="18.667" Background="#FF3B832B">
             <TextBlock Text="DEPOSIT" TextAlignment="Center" />
         </Button>
-        <Button  Height="66" HorizontalAlignment="Left" Margin="10,8,0,0" x:Name="transferButton" Foreground="White" VerticalAlignment="Top" Width="172" HorizontalContentAlignment="Stretch" Grid.Column="4" Grid.Row="3" Grid.ColumnSpan="2" Click="transferFunds_Click" FontSize="18.667" Background="#FF3B832B">
+        <Button  Height="66" HorizontalAlignment="Left" Margin="70,17,0,0" x:Name="transferButton" Foreground="White" VerticalAlignment="Top" Width="172" HorizontalContentAlignment="Stretch" Grid.Column="4" Grid.Row="4" Grid.ColumnSpan="2" Click="transferFunds_Click" FontSize="18.667" Background="#FF3B832B">
             <TextBlock Text="TRANSFER FUNDS" TextAlignment="Center" />
         </Button>
-        <Button  Height="66" HorizontalAlignment="Left" Margin="60,8,0,0" x:Name="balanceButton" Foreground="White" VerticalAlignment="Top" Width="172" HorizontalContentAlignment="Stretch" Grid.Row="3" Grid.ColumnSpan="2" Click="balance_Click" FontSize="18.667" Grid.Column="1" Background="#FF3B832B">
+        <Button  Height="66" HorizontalAlignment="Left" Margin="0,17,0,0" x:Name="balanceButton" Foreground="White" VerticalAlignment="Top" Width="172" HorizontalContentAlignment="Stretch" Grid.Row="4" Grid.ColumnSpan="2" Click="balance_Click" FontSize="18.667" Grid.Column="1" Background="#FF3B832B">
             <TextBlock Text="PRINT BALANCE" TextAlignment="Center" />
         </Button>
 

@@ -34,7 +34,7 @@ namespace WpfApplication2
         private void deposit_Click(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new Uri("WithdrawPage.xaml", UriKind.Relative));
+            ns.Navigate(new Uri("DepositPage.xaml", UriKind.Relative));
 
            
         }
