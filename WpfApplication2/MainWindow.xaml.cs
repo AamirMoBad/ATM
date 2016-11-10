@@ -20,31 +20,11 @@ namespace WpfApplication2
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static int chequing = 100, saving=100, balance=saving+chequing;
+        public static int chequingBalance = 100, savingBalance=500, totalBalance=savingBalance+chequingBalance;
+
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            WithdrawCheq win2 = new WithdrawCheq();
-            win2.Show();
-            this.Close();
-        }
-        private void button_copy_Click(object sender, RoutedEventArgs e)
-        {
-            WithdrawSav win2 = new WithdrawSav();
-            win2.Show();
-            this.Close();
-        }
-
-        private void balance_Click(object sender, RoutedEventArgs e)
-        {
-            WithdrawSav win2 = new WithdrawSav();
-            win2.Show();
-            this.Close();
         }
 
         private void Frame_Navigated(object sender, NavigationEventArgs e)

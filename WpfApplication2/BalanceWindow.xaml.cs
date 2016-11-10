@@ -23,13 +23,13 @@ namespace WpfApplication2
         {
             InitializeComponent();
 
-            String temp = String.Concat("$ ", MainWindow.chequing.ToString());
+            String temp = String.Concat("$ ", MainWindow.chequingBalance.ToString());
             label1.Content = temp;
 
-            temp = String.Concat("$ ", MainWindow.saving.ToString());
+            temp = String.Concat("$ ", MainWindow.savingBalance.ToString());
             label1_Copy.Content = temp;
 
-            temp = String.Concat("$ ", MainWindow.balance.ToString());
+            temp = String.Concat("$ ", MainWindow.totalBalance.ToString());
             label1_Copy1.Content = temp;
 
         }

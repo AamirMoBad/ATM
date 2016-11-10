@@ -77,32 +77,17 @@
     <Compile Include="Chequing.xaml.cs">
       <DependentUpon>Chequing.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DepoCashWindow.xaml.cs">
-      <DependentUpon>DepoCashWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DepoChqWindow.xaml.cs">
-      <DependentUpon>DepoChqWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page1.xaml.cs">
-      <DependentUpon>Page1.xaml</DependentUpon>
+    <Compile Include="MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page2.xaml.cs">
-      <DependentUpon>Page2.xaml</DependentUpon>
+    <Compile Include="TransferFundsPage.xaml.cs">
+      <DependentUpon>TransferFundsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Savings.xaml.cs">
-      <DependentUpon>Savings.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Trial.xaml.cs">
-      <DependentUpon>Trial.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WithdrawCheq.xaml.cs">
-      <DependentUpon>WithdrawCheq.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WithdrawSav.xaml.cs">
-      <DependentUpon>WithdrawSav.xaml</DependentUpon>
+    <Compile Include="WithdrawPage.xaml.cs">
+      <DependentUpon>WithdrawPage.xaml</DependentUpon>
     </Compile>
     <Page Include="BalanceWindow.xaml">
       <SubType>Designer</SubType>
@@ -112,17 +97,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DepoCashWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DepoChqWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -136,29 +117,13 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Page1.xaml">
+    <Page Include="TransferFundsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page2.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="WithdrawPage.xaml">
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Savings.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Trial.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WithdrawCheq.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WithdrawSav.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

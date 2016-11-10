@@ -31,7 +31,7 @@ namespace WpfApplication2
             if(textBox.Text == "789")
             {
                 NavigationService ns = NavigationService.GetNavigationService(this);
-                ns.Navigate(new Uri("Page1.xaml", UriKind.Relative));
+                ns.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
             }
             else
             {
@@ -49,7 +49,7 @@ namespace WpfApplication2
         private void button_Click(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new Uri("Page1.xaml", UriKind.Relative));
+            ns.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
         }
     }
 }
