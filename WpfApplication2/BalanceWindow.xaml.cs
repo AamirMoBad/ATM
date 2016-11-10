@@ -29,7 +29,8 @@ namespace WpfApplication2
             temp = String.Concat("$ ", MainWindow.savingBalance.ToString());
             label1_Copy.Content = temp;
 
-            temp = String.Concat("$ ", MainWindow.totalBalance.ToString());
+  
+            temp = String.Concat("$ ", (MainWindow.savingBalance + MainWindow.chequingBalance).ToString());
             label1_Copy1.Content = temp;
 
         }
