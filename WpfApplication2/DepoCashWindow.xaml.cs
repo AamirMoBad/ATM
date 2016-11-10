@@ -19,8 +19,9 @@ namespace WpfApplication2
     /// </summary>
     public partial class DepoCashWindow : Window
     {
-        int input;
+        double input;
         double input2;
+        double temp;
         public DepoCashWindow()
         {
             InitializeComponent();
@@ -28,21 +29,29 @@ namespace WpfApplication2
             input2 = 0;
         }
 
+        // Performs deposit and displays result
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             input2 = Convert.ToDouble(label1.Text);
+            temp = Math.Round((input + input2), 2);
             if (DepositPage.accountSelect == 1)
             {
-                MainWindow.savingBalance = MainWindow.savingBalance + input + input2;
+                WithdrawPage.withdraw(-(temp),DepositPage.accountSelect);
+
+                ErrorWindow success = new ErrorWindow("You have deposited $" + (temp) + "\ninto your savings account");
+                success.Show();
             }
             else if (DepositPage.accountSelect == 2)
             {
-                MainWindow.totalBalance = MainWindow.totalBalance + input + input2;
+                WithdrawPage.withdraw(-(temp), DepositPage.accountSelect);
+                ErrorWindow success = new ErrorWindow("You have deposited $" + (temp) + "\ninto your chequing account");
+                success.Show();
             }
             input = 0;
             input2 = 0;
             label1.Text = "0.00";
             updateText();
+
         }
 
         private void add5(object sender, RoutedEventArgs e)
