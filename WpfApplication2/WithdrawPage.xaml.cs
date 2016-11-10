@@ -65,7 +65,7 @@ namespace WpfApplication2
         }
 
         // Withdraws specified amount within reasonable limits
-        public void withdraw(int amount) {
+        public void withdraw(double amount) {
             if (accountSelect == 1)
             {
                 if (amount > MainWindow.savingBalance)
@@ -75,6 +75,10 @@ namespace WpfApplication2
                 {
                     MainWindow.savingBalance -= amount;
                     updateBalance(MainWindow.savingBalance);
+
+                    ErrorWindow success = new ErrorWindow("You have withdrawn $" + (amount) + "\nfrom your savings account");
+                    success.Show();
+
                     error_Label.Content = "";
                 }
             }
@@ -83,11 +87,16 @@ namespace WpfApplication2
                 if (amount > MainWindow.chequingBalance)
                 {
                     error_Label.Content = "You do not have enough funds";
+
                 }
                 else
                 {
                     MainWindow.chequingBalance -= amount;
                     updateBalance(MainWindow.chequingBalance);
+
+                    ErrorWindow success = new ErrorWindow("You have withdrawn $" + (amount) + "\nfrom your chequing account");
+                    success.Show();
+
                     error_Label.Content = "";
                 }
             } else if (accountSelect == 0)
@@ -96,7 +105,18 @@ namespace WpfApplication2
             }
         }
 
+        public static void withdraw(double amount,int accountSelect)
+        {
+            if (accountSelect == 1)
+            {
+                MainWindow.savingBalance -= amount;
 
+            }
+            else if (accountSelect == 2)
+            {
+                MainWindow.chequingBalance -= amount;
+            }    
+        }
 
         private void withdraw10_Click(object sender, RoutedEventArgs e)
         {

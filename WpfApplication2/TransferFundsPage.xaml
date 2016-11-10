@@ -54,7 +54,7 @@
             <Label x:Name="To_Label" Content="TO:" Height="40" Foreground="White" Canvas.Left="568" Canvas.Top="276" Width="206" FontFamily="Segoe UI Symbol" FontSize="26.667"/>
             <Button x:Name="transferButton" Content="TRANSFER" Foreground="White" HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="125" Background="#FF215BB0" FontSize="18" Click="transfer_Click" Canvas.Left="486" Canvas.Top="480"/>
             <Label x:Name="From_Label_Copy" Content="Transfer Amount&#xA;" Height="40" Foreground="White" Canvas.Left="239" Canvas.Top="132" Width="206" FontFamily="Segoe UI Symbol" FontSize="26.667"/>
-            <Label x:Name="error_Label" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="53" Foreground="Red" Canvas.Top="237" Width="680" FontFamily="Segoe UI Symbol" FontSize="14"/>
+            <Label x:Name="error_Label" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="53" Foreground="Red" Canvas.Top="237" Width="680" FontFamily="Segoe UI Symbol" FontSize="14"/>
         </Canvas>
         <TextBox x:Name="transferAmount_TextBox" Height="41" Margin="248,182,264,0" TextWrapping="Wrap" Text="$0.00" VerticalAlignment="Top" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" GotFocus="transferAmount_GotFocus"/>
     </Grid>

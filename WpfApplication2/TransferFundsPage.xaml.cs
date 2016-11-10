@@ -139,6 +139,9 @@ namespace WpfApplication2
                     updateBalance(MainWindow.savingBalance, 1);
                     updateBalance(MainWindow.chequingBalance, 2);
 
+                    ErrorWindow success = new ErrorWindow("You have transferred $" + (transferAmount) + "\nfrom savings to chequing");
+                    success.Show();
+
                 }
                 else if (accountSelect == 2 && accountSelect2 == 1)
                 {
@@ -147,6 +150,9 @@ namespace WpfApplication2
 
                     updateBalance(MainWindow.savingBalance, 2);
                     updateBalance(MainWindow.chequingBalance, 1);
+
+                    ErrorWindow success = new ErrorWindow("You have transferred $" + (transferAmount) + "\nfrom chequing to savings");
+                    success.Show();
                 }
             }
         }

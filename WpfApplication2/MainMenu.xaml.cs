@@ -43,6 +43,9 @@ namespace WpfApplication2
         {
             BalanceWindow win2 = new BalanceWindow();
             win2.Show();
+
+            ErrorWindow success = new ErrorWindow("Please collect your printed balance \nfrom the box below");
+            success.Show();
         }
 
         private void transferFunds_Click(object sender, RoutedEventArgs e)

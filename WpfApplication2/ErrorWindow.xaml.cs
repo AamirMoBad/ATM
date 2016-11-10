@@ -22,12 +22,15 @@ namespace WpfApplication2
         public ErrorWindow(String eMessage)
         {   
             InitializeComponent();
-            error_Label.Content = eMessage;
+            text.IsReadOnly = true;
+            text.AppendText(eMessage);
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+
+
     }
 }

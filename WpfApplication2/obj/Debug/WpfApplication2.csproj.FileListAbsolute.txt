@@ -103,3 +103,4 @@ D:\Libraries\Git\ATM\WpfApplication2\obj\Debug\WpfApplication2.Properties.Resour
 D:\Libraries\Git\ATM\WpfApplication2\obj\Debug\WpfApplication2.csproj.GenerateResource.Cache
 D:\Libraries\Git\ATM\WpfApplication2\obj\Debug\ATM_Machine.exe
 D:\Libraries\Git\ATM\WpfApplication2\obj\Debug\ATM_Machine.pdb
+D:\Libraries\Git\ATM\WpfApplication2\obj\Debug\WpfApplication2.csprojResolveAssemblyReference.cache

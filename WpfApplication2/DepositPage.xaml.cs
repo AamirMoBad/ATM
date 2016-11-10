@@ -36,7 +36,6 @@ namespace WpfApplication2
             hardDeposit.Hide();
             NavigationService ns = NavigationService.GetNavigationService(this);
             ns.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
-
         }
 
         private void account_DropDownClosed(object sender, EventArgs e)
